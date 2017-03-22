@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app2">
+        <p V-bind:title="message">
+            鼠标悬停会有效果
+        </p>
+    </div>
+
+
+    <script>
+        var app=new Vue({
+            el:'#app2',
+            data:{
+                message:'hello Vue!'+new Date()
+            }
+        })
+    </script>
+</body>
+</html>
