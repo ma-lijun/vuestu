@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app7">
+        <ol>
+            <todo-li></todo-li>
+        </ol>
+
+        <!--<ol>-->
+            <!--&lt;!&ndash; 创建一个 todo-item 组件的实例 &ndash;&gt;-->
+            <!--<todo-item></todo-item>-->
+        <!--</ol>-->
+    </div>
+
+
+    <script>
+        //            message:'122'
+        //            此处应该放模板，而且是大括号括起来的模板
+        Vue.component('todo-li',{template:'<li>次数是组件放过的模板</li>'})
+
+//                Vue.component('todo-item', {
+//                    template: '<li>这是个待办项</li>'
+//                })
+        var app=new Vue({
+            el:'#app7'
+        })
+
+
+
+
+
+
+
+//        // 定义名为 todo-item 的新组件
+//        Vue.component('todo-item', {
+//            template: '<li>这是个待办项</li>'
+//        })
+//        var a07=new Vue({
+//            el:'#app7'
+//        })
+    </script>
+</body>
+</html>
