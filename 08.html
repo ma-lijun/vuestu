@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app8">
+        <ol>
+            <!--&lt;!&ndash; 创建一个 todo-li 组件的实例 &ndash;&gt;-->
+
+            <todo-li v-for="todo in todos" v-bind:todo="todo"></todo-li>
+        </ol>
+
+    </div>
+
+
+    <script>
+        //            message:'122'
+        //            此处应该放模板，而且是大括号括起来的模板
+        Vue.component('todo-li',{
+//            pros:['','']
+            props:['todo'],
+            template:'<li>{{todo.text}}</li>'
+        })
+
+        var app=new Vue({
+            el:'#app8',
+            data:{
+                todos:[
+                    {text:'woshi1'},
+                    {text:'vus'},
+                    {text:'woshi pythoner'}
+                ]
+            }
+        })
+
+
+    </script>
+</body>
+</html>
