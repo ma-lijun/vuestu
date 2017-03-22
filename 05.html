@@ -16,12 +16,14 @@
     <script>
         var app=new Vue({
             el:'#app5',
-            message:"zheli shi paragraph",
             data:{
                 message:"zheli shi paragraph"
+
+            },
+            method:{
                 function:reversmessage(){
-                    message=this.message().splice('').reverse().join()
-        }
+                   message=this.message().splice('').reverse().join();
+                }
             }
         })
     </script>
