@@ -8,7 +8,7 @@
 <body>
     <div id="app5">
         <p>{{message}}</p>
-        <button v-on:click="reversmessage"></button>
+        <button v-on:click="reversmessage">翻转文字</button>
 
     </div>
 
@@ -20,9 +20,9 @@
                 message:"zheli shi paragraph"
 
             },
-            method:{
-                function:reversmessage(){
-                   message=this.message().splice('').reverse().join();
+            methods:{
+                reversmessage:function(){
+                   message=this.message().split('').reverse().join('');
                 }
             }
         })
